@@ -8,6 +8,12 @@ This problem may be resolved in time. But for the moment this is one workaround 
 
 After generating the updated context file, the output format can be tweaked in the prompt. This can be provided to something like an assistant to make sure that it's grounded in the correct syntax for the SDK.
 
+## Utility Flow
+
+- Python script in scripts pulls in the latest version of the README and copies it to the repository. 
+- The prompt in the prompts folder instructs a large language model to convert the README into a piece of context data by providing specific formatting instructions. This is where the output format can be tweaked. For example, you may wish to instruct that it be outputted into JSON
+- Finally, the formatted context data is collected within the repository. From here it can be piped into a vector store in a pipeline. Or more simply uploaded to a vector store as context data using a drag and drop mechanism. 
+
 ## Author
 
 Daniel Rosehill  
